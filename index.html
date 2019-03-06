@@ -2,17 +2,32 @@
 <html lang=en>
 <head>
   <meta charset=utf-8>
-  <title>Fager's choice</title>
+  <title>Protein choice</title>
+  <link href="./main.css" rel="stylesheet" type"text/css">
 </head>
 <body>
-  <h1>Help Fager choose between..</h1>
-  <div>
-    <div>
-      <input placeholder="Something"></input>
+  <h1 class="title1">Which protein is most environmental friendly?</h1>
+  <div class="inputsection">
+    <div class="inputs">
+      <input placeholder="Protein"></input>
     </div>
-    <button>Add</button>
+    <button class="addoption">Add</button>
   </div>
-  <button>Go!</button>
-  <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10665075_10152735061884204_5680467001460925846_n.jpg?_nc_cat=110&amp;_nc_ht=scontent-arn2-1.xx&amp;oh=6c35365939fc5b8ef702b262d768f3b6&amp;oe=5D232B27" height="70" width="70">
+  <div class="resultsection"></div>
+  <button class="gooption">Go!</button>
+  <img src="https://img.purch.com/rc/300x200/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4MC8wNjMvb3JpZ2luYWwvcHJvdGVpbi1mb29kcy5qcGc" height="200" width="300">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+  $('.resultsection').hide()
+
+  var add_option = function() {
+    $('.inputs').append('<input></input>')
+  }
+
+  $('.addoption').click(add_option)
+})
+</script>
 </body>
 </html>
