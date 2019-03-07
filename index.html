@@ -2,20 +2,20 @@
 <html lang=en>
 <head>
   <meta charset=utf-8>
-  <title>Protein choice</title>
+  <title>Lucky number</title>
   <link href="./main.css" rel="stylesheet" type"text/css">
 </head>
 <body>
-  <h1 class="title1">Which protein is most environmental friendly?</h1>
+  <h1 class="title1">Which number is my lucky number?</h1>
   <div class="inputsection">
     <div class="inputs">
-      <input placeholder="Protein"></input>
+      <input placeholder="Number"></input>
     </div>
     <button class="addoption">Add</button>
   </div>
   <div class="resultsection"></div>
   <button class="gooption">Go!</button>
-  <img src="https://img.purch.com/rc/300x200/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4MC8wNjMvb3JpZ2luYWwvcHJvdGVpbi1mb29kcy5qcGc" height="200" width="300">
+  <img <img class="irc_mi" src="https://planets.powerfortunes.com/images/my-lucky-numbers.png" height="200" width="300">
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
@@ -27,6 +27,19 @@ $(function() {
   }
 
   $('.addoption').click(add_option)
+
+  var options = []
+  var submit = function() {
+    $('.inputsection').hide()
+    $('.resultsection').css('display', 'flex')
+    $('input').each(function() {
+      options.push($(this).val())
+    })
+    var winner = options[Math.floor(Math.random() * options.length)]
+    console.log(winner)
+    $('.resultsection').text(winner)
+  }
+  $('.gooption').click(submit)
 })
 </script>
 </body>

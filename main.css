@@ -41,3 +41,15 @@ input{
 button{
   font-size: 30px;
 }
+
+img{
+  margin-top: 30px;
+}
+
+.resultsection {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
